@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+main {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 50px 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: #9acc00;
+  --secondary: #fed55d;
+  --tertiary: #ff87c1;
+  --quaternary: #c3adc3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  color: #202A44;
+  
+}
+
+@font-face {
+  font-family: 'fredoka_dingbatsregular';
+  src: url('localhost:3000/fredoka_dingbats-webfont.woff2') format('woff2'),
+       url('localhost:3000/fredoka_dingbats-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
