@@ -10,6 +10,11 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    order(_id: ID!): order
+    checkout(products: [ID]!): Checkout
   }
   type Mutation {
     login(email: String!, password: String!): Auth
@@ -18,6 +23,9 @@ const typeDefs = gql`
   type Auth {
     token: ID!
     user: User
+  }
+  type Checkout {
+    session: ID
   }
 `;
 
