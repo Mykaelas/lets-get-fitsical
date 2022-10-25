@@ -1,20 +1,41 @@
-main {
-  margin: 0 auto;
-  max-width: 90%;
-  padding: 50px 30px;
-}
 
 :root {
   --primary: #9acc00;
   --secondary: #fed55d;
   --tertiary: #ff87c1;
-  --quaternary: #c3adc3;
+  --quaternary: #e0b0ff;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0 auto;
+  height: 150px;
+
 }
 
+header {
+  background-color: var(--secondary);
+
+}
+
+header a {
+  text-decoration: none;
+  color: var(--quaternary);
+  font-size: 20px;
+  height: 150px;
+
+}
+ 
+
+header img {
+  max-width: 100%;
+  height: 130px;
+}
+
+#Parent {
+  display: inline-flex;
+  flex-direction: row;
+}
 body {
   margin: 0;
   padding: 0;
@@ -31,3 +52,16 @@ body {
   font-style: normal;
 
 }
+
+
+#footer {
+  position: fixed;
+  /* add in a gradient for bottom of footer */
+  background: linear-gradient(right, var(--teritary), #AAFF00);
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+
+

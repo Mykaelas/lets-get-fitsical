@@ -1,22 +1,21 @@
 import Nav from '../Nav';
 import React from 'react';
-import Bear from '../../assets/images/bear-do-exercies-clipart-md.png';
+import Bear from '../../assets/images/bear-do-exercises-clipart-md.png';
 
 
 function Header() {
     return (
-        <div>
+        <div >
             <header>
                 <a href="/">
                     <h1>
-                        Let's Get Fit-
-                        Sical
+                        Let's Get Fit-<span class="Sical">Sical</span>
                         <img src={Bear} alt="bear"/>
                     </h1>
                 </a>
                 {// Header has Nav imported in to it// 
                 }
-                <Nav>
+                <Nav id="Nav">
                 </Nav>
             </header>
         </div>
