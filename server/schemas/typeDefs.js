@@ -6,19 +6,28 @@ const typeDefs = gql`
     username: String
     email: String
   }
+  type Order {
+    _id: ID
+    purchaseDate: String
+    donations: [Donations]
+  }
+  type Donations {
+    _id: ID
+    price: Float
+  }
   type Query {
     me: User
     users: [User]
     user(username: String!): User
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    order(_id: ID!): order
-    checkout(products: [ID]!): Checkout
+    donation(_id: ID!): Donations
+    order(_id: ID!): Order
+    checkout(donation: [ID]!): Checkout
   }
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    addOrder(donations: [ID]!): Order
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
   }
   type Auth {
     token: ID!

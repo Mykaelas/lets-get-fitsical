@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Donations, Order } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
@@ -22,6 +22,37 @@ const resolvers = {
       }
       throw new AuthenticationError("not logged in");
     },
+    checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
+      const order = new Order({ donations: args.donations });
+      
+
+      const { donations } = await order.populate('donations');
+
+      for (let i = 0; i < donations.length; i++) {
+     
+        const price = await stripe.prices.create({
+          donations: donations.id,
+          unit_amount: donations[i].price * 100,
+          currency: 'usd',
+        });
+
+        line_items.push({
+          price: price.id,
+          quantity: 1
+        });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items,
+        mode: 'payment',
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`
+      });
+
+      return { session: session.id };
+    }
   },
   Mutation: {
     addUser: async (parent, args) => {
@@ -44,6 +75,18 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+    addOrder: async (parent, { donations }, context) => {
+      console.log(context);
+      if (context.user) {
+        const order = new Order({ donations });
+
+        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+
+        return order;
+      }
+
+      throw new AuthenticationError('Not logged in');
     },
   },
 };
