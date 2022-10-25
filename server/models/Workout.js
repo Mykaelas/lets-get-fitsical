@@ -6,6 +6,10 @@ const workoutSchema = new Schema({
       type: String,
     },
   ],
+  workoutId: {
+    type: String,
+    required: true,
+  },
   type: [
     {
       type: String,

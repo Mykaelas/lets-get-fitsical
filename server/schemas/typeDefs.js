@@ -6,6 +6,13 @@ const typeDefs = gql`
     username: String
     email: String
   }
+  type Workout {
+    workoutId: String
+    name: [String]
+    type: [String]
+    muscle: [String]
+    difficulty: [String]
+  }
   type Query {
     me: User
     users: [User]
@@ -21,10 +28,4 @@ const typeDefs = gql`
   }
 `;
 
-// type RemoveUserPayload {
-//   removed: Boolean
-//   user: username
-// }
-// removeUser(id: ID!): RemoveUserPayload
-// export the typeDefs
 module.exports = typeDefs;
