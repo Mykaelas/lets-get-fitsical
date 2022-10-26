@@ -50,27 +50,8 @@ export const deleteWorkout = (workoutId, token) => {
   });
 };
 
-// make a search to google books api
-// https://www.googleapis.com/books/v1/volumes?q=harry+potter
 export const searchWorkouts = (query) => {
-  const fetch = require("node-fetch");
-
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "2f1103bcf0msh9ba8e9d5b5d1dd9p10604ejsnc34304aaddc5",
-      "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
-    },
-  };
-
-  fetch(url, options)
-    .then((res) => res.json())
-    .then((json) => console.log(json))
-    .catch((err) => console.error("error:" + err));
-
-  return fetch(
-    `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=${query}`
-  );
+  return fetch(url, options).then((res) => res.json());
 };
 // https://rapidapi.com/apininjas/api/exercises-by-api-ninjas
 
@@ -78,3 +59,16 @@ export const searchWorkouts = (query) => {
 // export const searchGoogleBooks = (query) => {
 //   return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
 // };
+
+// export const searchWorkouts = (query) => {
+//   const url = `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=${query}`;
+
+//     const options = {
+//       method: "GET",
+//       headers: {
+//         "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
+//         "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
+//       },
+//     };
+//     return fetch(url, options).then((res) => res.json());
+//   };

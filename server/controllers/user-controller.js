@@ -1,6 +1,4 @@
-// import user model
 const { User } = require("../models");
-// import sign token function from auth
 const { signToken } = require("../utils/auth");
 
 module.exports = {
@@ -51,32 +49,4 @@ module.exports = {
   },
   // save a workout to a user's `savedworkouts` field by adding it to the set (to prevent duplicates)
   // user comes from `req.user` created in the auth middleware function
-  async saveWorkout({ user, body }, res) {
-    console.log(user);
-    try {
-      const updatedUser = await User.findOneAndUpdate(
-        { _id: user._id },
-        { $addToSet: { savedWorkout: body } },
-        { new: true, runValidators: true }
-      );
-      return res.json(updatedUser);
-    } catch (err) {
-      console.log(err);
-      return res.status(400).json(err);
-    }
-  },
-  // remove a book from `savedWorkouts`
-  async deleteWorkout({ user, params }, res) {
-    const updatedUser = await User.findOneAndUpdate(
-      { _id: user._id },
-      { $pull: { savedWorkout: { workoutId: params.workoutId } } },
-      { new: true }
-    );
-    if (!updatedUser) {
-      return res
-        .status(404)
-        .json({ message: "Couldn't find user with this id!" });
-    }
-    return res.json(updatedUser);
-  },
 };

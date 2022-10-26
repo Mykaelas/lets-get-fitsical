@@ -1,7 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
+import { searchWorkouts } from "./utils/API";
 
 function App() {
+  useEffect(() => {
+    searchWorkouts("biceps").then((results) => {
+      console.log(results);
+    });
+  }, []);
   return (
     <div className="App">
       <header className="App-header">

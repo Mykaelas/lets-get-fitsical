@@ -2,8 +2,6 @@ const router = require("express").Router();
 const {
   createUser,
   getSingleUser,
-  saveWorkout,
-  deleteWorkout,
   login,
 } = require("../../controllers/user-controller");
 
@@ -16,7 +14,5 @@ router.route("/").post(createUser).put(authMiddleware, saveWorkout);
 router.route("/login").post(login);
 
 router.route("/me").get(authMiddleware, getSingleUser);
-
-router.route("/workouts/:workoutId").delete(authMiddleware, deleteWorkout);
 
 module.exports = router;
