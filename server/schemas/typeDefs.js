@@ -9,9 +9,9 @@ const typeDefs = gql`
   type Order {
     _id: ID
     purchaseDate: String
-    donations: [Donations]
+    donations: [Donation]
   }
-  type Donations {
+  type Donation {
     _id: ID
     price: Float
   }
@@ -19,14 +19,14 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
-    donation(_id: ID!): Donations
+    donation(_id: ID!): Donation
     order(_id: ID!): Order
-    checkout(donation: [ID]!): Checkout
+    checkout(donation: ID!): Checkout
   }
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addOrder(donations: [ID]!): Order
+    addOrder(donation: ID!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
   }
   type Auth {
