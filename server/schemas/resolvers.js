@@ -34,8 +34,10 @@ const resolvers = {
         },
       };
       const response = await fetch(url, options);
+      console.log("-------------------------------");
       console.log(response);
       const data = await response.json();
+      console.log("-------------------------------");
       console.log(data);
       return data;
     },
