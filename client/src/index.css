@@ -15,6 +15,8 @@
 
 header {
   background-color: var(--secondary);
+  height: 150px;
+  z-index: -1;
 
 }
 
@@ -35,12 +37,21 @@ header img {
 #Parent {
   display: inline-flex;
   flex-direction: row;
+
 }
+
+.articles{
+  list-style: none;
+  padding: 0 25px 0px 0px;
+  font-size: 1.875em;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-weight: 300;
   color: #202A44;
+  background-color: var(--primary);
   
 }
 
