@@ -42,7 +42,6 @@ module.exports = {
         "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
       },
     };
-
     return fetch(url, options).then((res) => res.json());
   },
 };

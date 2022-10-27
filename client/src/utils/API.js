@@ -50,8 +50,8 @@ export const deleteWorkout = (workoutId, token) => {
   });
 };
 
-export const searchWorkouts = (query) => {
-  return fetch(url, options).then((res) => res.json());
+export const searchWorkouts = (url, options) => {
+  return fetch(``).then((res) => res.json());
 };
 // https://rapidapi.com/apininjas/api/exercises-by-api-ninjas
 

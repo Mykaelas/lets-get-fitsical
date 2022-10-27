@@ -7,14 +7,12 @@ const typeDefs = gql`
     email: String
   }
   type Workout {
-    workoutId: String
-    name: [String]
-    type: [String]
     muscle: [String]
     difficulty: [String]
   }
   type Query {
     me: User
+    workout: String
     users: [User]
     user(username: String!): User
   }
@@ -29,3 +27,10 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+// type Workout {
+//   workoutId: String
+//   name: [String]
+//   type: [String]
+//   muscle: [String]
+//   difficulty: [String]
+// }

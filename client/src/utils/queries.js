@@ -15,5 +15,16 @@ export const GET_ME = gql`
         difficulty
       }
     }
+    `;
+
+export const GET_WORKOUT = gql`
+  {
+    workout {
+      workoutId
+      name
+      type
+      muscle
+      difficulty
+    }
   }
 `;
