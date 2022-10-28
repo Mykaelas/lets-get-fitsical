@@ -1,37 +1,38 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-// import About from './components/About';
-// import Contact from './components/Contact';
+import About from './components/About';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import Trainers from './components/Trainers';
-// import Workouts from './components/Workouts';
-
+import Trainers from './components/Trainers';
+import Workouts from './components/Workouts';
+import Main from './components/Main';
+import Donation from './components/Donations'
+import Login from './components/Login';
 function App() {
-  console.log('Hey');
-  // const [tabSelected, setTabSelected] = useState(false);
+  const [tabSelected, setTabSelected] = useState('default');
 
-  //   switch(choice) {
-  //     case <About></About>:
-  //       break;
-  //     case <Contact></Contact>:
-  //       break;
-  //     case <Trainers></Trainers>:
-  //       break;
-  //     case <Workouts></Workouts>:
-  //       break;
-  //     };
     return (
       <div>
-      <Header
-        // contactSelected={contactSelected}
-        // setContactSelected={setContactSelected}
-      ></Header>
-      <main>
-      {/* switch case here */}
-      </main>
+        <Header setTabSelected={setTabSelected}></Header>
+      <div>
+          <main>
+            {
+              {
+                about: <About />,
+                contact: <Contact />,
+                trainers: <Trainers />,
+                workouts: <Workouts />,
+                donation: <Donation />,
+                login: <Login />,
+                default: <Main />
+
+              }[tabSelected]
+            } 
+            </main>
+          </div>
       <Footer></Footer>
     </div>
-  );
+    );
 }
 
 export default App;

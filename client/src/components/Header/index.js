@@ -3,19 +3,24 @@ import React from 'react';
 import Bear from '../../assets/images/bear-do-exercises-clipart-md.png';
 
 
-function Header() {
+function Header(props) {
+    const {
+        setTabSelected
+    } = props;
+
     return (
         <div >
-            <header>
+            <header className="flexbox">
                 <a href="/">
                     <h1>
-                        Let's Get Fit-<span class="Sical">Sical</span>
+                        Let's Get Fit- <br />Sical // switch line height  to match font size
                         <img src={Bear} alt="bear"/>
                     </h1>
                 </a>
                 {// Header has Nav imported in to it// 
                 }
-                <Nav id="Nav">
+                <Nav id="Nav"
+                    setTabSelected={setTabSelected}>
                 </Nav>
             </header>
         </div>

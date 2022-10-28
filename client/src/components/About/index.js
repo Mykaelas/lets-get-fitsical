@@ -3,10 +3,11 @@ import React from 'react';
 function About() {
     return (
         <section className>
-            <h1 id="about">
-                Who Are We?
-            </h1>
+           
             <div classname>
+            <h2 id="about">
+                Who Are We?
+            </h2>
                 <p>
                     We are a group of fitness enthusiast with a passion
                     to help you get in shape! This website was created as a 
