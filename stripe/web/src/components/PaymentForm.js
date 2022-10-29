@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { CarElement, useElement, uesStripe } from "@stripe/react-stripe-js"
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
 
 
