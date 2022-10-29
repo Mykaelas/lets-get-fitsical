@@ -3,44 +3,48 @@
   --primary: #9acc00;
   --secondary: #fed55d;
   --tertiary: #ff87c1;
-  --quaternary: #e0b0ff;
+  --quaternary: #bd959f;
+  --mauve: #e0b0ff;
 }
 
 * {
   box-sizing: border-box;
-  margin: 0 auto;
-
-
+  margin: 0;
+  padding: 0;
 }
 
 .flexbox {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-evenly;
+
 }
+
 
 header {
   background-color: var(--secondary);
-
   font-family:  'fredoka', Arial, Helvetica, sans-serif ;
-
 }
 
 
 header a {
   text-decoration: none;
   color: var(--quaternary);
-  font-size: 20px;
   flex: 0 1 auto;
   width: 100%;
+  line-height: 1.5em;
+  font-size: 40px;
+
 }
 
 header a:hover {
   color: rebeccapurple;
 }
 
+/* Potentially change the bears location */
 header img {
- height : 130px;
+ height : 160px;
+ padding: 0 500px;
 }
 
 header.flex-row {
@@ -90,11 +94,48 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  
+  /* header a {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+  
+  }
 
+  header img {
+    height: 60px;
+  }
+
+  header.flex-row {
+    display: flex; 
+    flex-wrap: wrap;
+    
+  }
+  #footer {
+    position: absolute;
+    width: 20%; */
+  /* } */
 }
 
 @media only screen and (min-width: 600px) {
+  /* header a {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+  
+  }
 
+  header img {
+    height: 60px;
+  }
+
+  header.flex-row {
+    display: flex; 
+    flex-wrap: wrap;
+    
+  }
+  #footer {
+    position: absolute;
+    width: 20%; */
+  /* } */
 }
 
 @media only screen and (min-width: 768px){
