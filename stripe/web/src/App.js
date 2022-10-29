@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <h1>Help Us Build the Let's Get FitSical App!!</h1>
       {showItem ? <StripeContainer/> : <> <h3>Donate $10.00</h3> <img src={LetsGetFitSical} width="600" height="300" align= "center" alt="Home Page for Let's Get FitSical" />
-       <button onCLick={() => setShowItem(true)}>Donate</button></>}
+       <button onClick={() => setShowItem(true)}>Donate</button></>}
+       
     </div>
   );
 }

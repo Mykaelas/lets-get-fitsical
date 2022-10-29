@@ -30,7 +30,7 @@ export default function PaymentForm() {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    const { error, paymentMethod } = await stripe.createPaymenMethod({
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: "card",
         card: elements.getElement(CardElement)
     })
@@ -66,6 +66,7 @@ if(!error) {
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
+            <button>Donate</button>
         </form> 
         :
         <div>

@@ -10,7 +10,29 @@ app.use(bodyParser.json())
 
 app.use(cors())
 
-
+app.post("/payment", cors(), async (req, res) => {
+    let {amount, id } = req.body
+    try {
+        const payment = await stripe.paymentIntents.create({
+            amount,
+            currenct: "USD",
+            description: "Donation",
+            payment_method: id,
+            confirm: true
+        })
+        console.log("Payment", payment)
+        res.json({
+            message: "Donation Successful!",
+            success: true
+        })
+    } catch (error) {
+        console.log("Error", error)
+        res.json({
+            message: "Donation failed",
+            success: false
+        })
+    }
+});
 
 
 
