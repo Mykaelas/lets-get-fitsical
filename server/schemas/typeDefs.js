@@ -6,11 +6,29 @@ const typeDefs = gql`
     username: String
     email: String
   }
+  type Workout {
+    name: String
+    type: String
+    muscle: String
+    equipment: String
+    difficulty: String
+    instructions: String
+  }
+
   type Query {
     me: User
     users: [User]
+    workout(
+      name: String
+      type: String
+      muscle: String
+      equipment: String
+      difficulty: String
+      instructions: String
+    ): [Workout]
     user(username: String!): User
   }
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
@@ -19,6 +37,7 @@ const typeDefs = gql`
     token: ID!
     user: User
   }
+
 `;
 
 // type RemoveUserPayload {
