@@ -1,13 +1,152 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root {
+  --primary: #9acc00;
+  --secondary: #fed55d;
+  --tertiary: #ff87c1;
+  --quaternary: #bd959f;
+  --mauve: #e0b0ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.flexbox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+
+}
+
+
+header {
+  background-color: var(--secondary);
+  font-family:  'fredoka', Arial, Helvetica, sans-serif ;
+}
+
+
+header a {
+  text-decoration: none;
+  color: var(--quaternary);
+  flex: 0 1 auto;
+  width: 100%;
+  line-height: 1.5em;
+  font-size: 40px;
+
+}
+
+header a:hover {
+  color: rebeccapurple;
+}
+
+/* Potentially change the bears location */
+header img {
+ height : 160px;
+ padding: 0 500px;
+}
+
+header.flex-row {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+#Parent {
+  display: inline-flex;
+  justify-content: flex-end;
+
+}
+
+.articles{
+  list-style: none;
+  padding: 0 25px 0px 0px;
+  font-size: 1.875em;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  color: #202A44;
+  background-color: var(--primary);
+  
+}
+
+@font-face {
+  font-family: 'fredoka';
+  src: url('assets/FredokaOne-Regular.woff') format('woff'),
+       url('assets/FredokaOne-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+#footer {
+  position: absolute;
+  /* add in a gradient for bottom of footer */
+  background: linear-gradient(to left, var(--teritary), #AAFF00);
+  bottom: 0;
+  width: 100%;
+
+}
+
+@media only screen and (max-width: 600px) {
+  
+  /* header a {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+  
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  header.flex-row {
+    display: flex; 
+    flex-wrap: wrap;
+    
+  }
+  #footer {
+    position: absolute;
+    width: 20%; */
+  /* } */
+}
+
+@media only screen and (min-width: 600px) {
+  /* header a {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+  
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  header.flex-row {
+    display: flex; 
+    flex-wrap: wrap;
+    
+  }
+  #footer {
+    position: absolute;
+    width: 20%; */
+  /* } */
+}
+
+@media only screen and (min-width: 768px){
+  
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+  
+}
+
