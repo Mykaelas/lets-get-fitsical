@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
 if(!error) {
     try {
         const {id} = paymentMethod
-        const response = await axios.post("/payment", {
+        const response = await axios.post("/success?session_id={CHECKOUT_SESSION_ID}", {
             amount: 1000,
             id
         })
