@@ -46,7 +46,7 @@ header a:hover {
 /* Potentially change the bears location */
 header img {
  height : 180px;
- /* padding: 10px 40px; */
+ padding: 10px 40px;
 }
 
 header.flex-row {
@@ -189,6 +189,36 @@ body {
   width: 200px;
 }
 
+#loginForm {
+  background-color: var(--background);
+  text-align: center;
+  margin: 210px 780px 0px 800px;
+  height: 500px;
+}
+
+#loginFormID {
+  font-size: 150px;
+}
+
+.loginFormContainer {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 480px;
+  height: 150px;
+
+}
+#loginFormContainerInputs {
+  font-size: 25px;
+  width: 450px;
+  padding: 5px;
+}
+
+#loginFormContainerButton {
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
 #footer {
   position: fixed;
   /* add in a gradient for bottom of footer */
@@ -196,7 +226,6 @@ body {
   background: linear-gradient(90deg, rgba(220,116,233,0.9206057422969187) 0%, rgba(143,255,0,1) 20%, rgba(252,171,0,1) 100%);
   bottom: 0;
   width: 100%;
-
 
 }
 
