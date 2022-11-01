@@ -15,7 +15,7 @@ function Nav(props) {
             </a>
           </li>
           <li className="mx-2 articles" >
-            <a data-testid="about" href="#trainers" onClick={() => setTabSelected('trainers')}>
+            <a data-testid="trainers" href="#trainers" onClick={() => setTabSelected('trainers')}>
               Trainers
             </a>
           </li>

@@ -42,22 +42,22 @@ function ContactForm() {
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="contactVariables">Name:</label>
-          <input id="contactBox" type="text" defaultValue={name} onBlur={handleChange} />
+          <input id="contactBox" placeholder="Enter Name" type="text" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor="email" className="contactVariables">Email address:</label>
-          <input id="contactBox" type="email" name="email" defaultValue={email} onBlur={handleChange} />
+          <input id="contactBox" placeholder="Enter Email" type="email" name="email" defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor="message" className="contactVariables">Message:</label>
-          <textarea id="contactBox"  name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+          <textarea id="contactBox" placeholder="Enter Your Message Here..."  name="message" rows="5" defaultValue={message} onBlur={handleChange} />
         </div>
         {errorMessage && (
           <div>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button data-testid="button" id="contactUsButton" type="submit">Submit</button>
       </form>
     </section>
   );

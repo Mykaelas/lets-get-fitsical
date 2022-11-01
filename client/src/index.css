@@ -75,7 +75,6 @@ header.break {
 body {
   margin: 0;
   padding: 0;
-  font-weight: 300;
   background-color: var(--primary);
   font-family: "fredoka", Arial, Helvetica, sans-serif;
   color: var(--font);
@@ -115,14 +114,14 @@ body {
   text-align: center;
   font-size: 100px;
   background-color:var(--background) ;
-  margin: 0px 400px 0px 400px;
+  margin: 20px 400px 0px 400px;
 
 }
 
 .aboutClass {
   background-color: var(--background);
   font-size: 80px;
-  margin: 200px 400px 0px 400px;
+  margin: 100px 400px 100px 400px;
 }
 
 .ultimateContainer {
@@ -172,22 +171,30 @@ body {
 }
 
 .contactUs {
+  margin: 200px 750px 0px 750px;
   background-color: var(--background);
   text-align: center;
 }
 
 .contactTag {
-  font-size: 60px;
+  font-size: 100px;
 }
 
 .contactVariables {
   font-size: 50px;
-  width: 400px;
 }
 
-.contactBox {
-  width: 200px;
+#contactBox {
+  padding: 7px;
+  font-size: 15px;
 }
+
+#contactUsButton {
+  font-size: 25px;
+  font-family: "fredoka", Arial, Helvetica, sans-serif;
+
+}
+
 
 #loginForm {
   background-color: var(--background);
@@ -217,7 +224,10 @@ body {
 #loginFormContainerButton {
   font-size: 20px;
   margin: 5px 0px;
+  font-family: "fredoka", Arial, Helvetica, sans-serif;
+
 }
+
 
 #footer {
   position: fixed;
@@ -230,32 +240,148 @@ body {
 }
 
 footer img {
-  height: 100px;
+  height: 50px;
   width: 85%;
   margin-top: auto;
 }
 
 @media only screen and (max-width: 600px) {
-  
-  /* header a {
-    font-size: 15px;
-    margin: 0 0 5px 0;
-  
+  .flexbox {
+    background-color: var(--secondary);
+  }
+
+  header a {
+    font-size: 18px;
+    background-color: var(--secondary);
+    width: 80%;
+    height: 100%;
+
   }
 
   header img {
-    height: 60px;
+    height: 150px;
   }
 
   header.flex-row {
     display: flex; 
     flex-wrap: wrap;
+  }
+
+  #Parent {
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 280px;
+  
+  }
+
+  .articles{
+    list-style: none;
+    padding: 0 15px 0px 0px;
+    font-size: 55px;
+    width: 100%;
+
     
   }
+
+  .mainContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-flow: wrap;
+    margin: 20px 50px 50px 50px;
+  }
+
+  .mainContainer p {
+    font-size: 25px;
+    padding: 100px;
+  }
+  .mainContainer img {
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  #aboutDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #about {
+    text-align: center;
+    margin: 40px 25px 0px 75px; 
+    background-color: var(--background);
+    font-size: 45px;
+
+  }
+
+  .aboutClass {
+    font-size: 20px;
+    background-color: var(--background);
+    margin: 20px 50px 50px 60px;
+  }
+
+  #trainerIMG {
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 20px 15px 20px;
+  }
+
+  .trainerNames {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .contactUs {
+    margin: 15px 50px 40px 50px;
+    background-color: var(--background);
+    text-align: center;
+  }
+
+  .contactTag {
+    font-size: 45px;
+  }
+
+  .contactVariables {
+   font-size: 25px; 
+  }
+
+  #contactUsButton {
+    font-size: 20px;
+    font-family: "fredoka", Arial, Helvetica, sans-serif;
+  }
+
+  #loginForm {
+    background-color: var(--background);
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+  }
+
+  #loginFormID {
+    font-size: 40px;
+  }
+  .loginFormContainer {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+  }
+
+  #loginFormContainerInputs {
+    font-size: 15px;
+    width: 320px;
+  }
   #footer {
-    position: absolute;
-    width: 20%; */
-  /* } */
+    position: fixed;
+    height: 25px;
+    width: 100%; 
+   }
 }
 
 @media only screen and (min-width: 600px) {
