@@ -5,6 +5,8 @@
   --tertiary: #ff87c1;
   --quaternary: #bd959f;
   --mauve: #e0b0ff;
+  --font: #0492C2;
+  --background: hsl(49, 62%, 72%);
 }
 
 * {
@@ -15,9 +17,8 @@
 
 .flexbox {
   display: flex;
+  flex-direction: row;
   align-items: flex-end;
-  justify-content: space-evenly;
-
 }
 
 
@@ -30,10 +31,11 @@ header {
 header a {
   text-decoration: none;
   color: var(--quaternary);
-  flex: 0 1 auto;
   width: 100%;
-  line-height: 1.5em;
+  /* line-height: 1.3em; */
   font-size: 40px;
+  display: flex;
+  flex-direction: row;
 
 }
 
@@ -43,14 +45,19 @@ header a:hover {
 
 /* Potentially change the bears location */
 header img {
- height : 160px;
- padding: 0 500px;
+ height : 180px;
+ padding: 10px 40px;
 }
 
 header.flex-row {
   flex: 1 1 auto;
   width: 100%;
 }
+
+header.break {
+  margin: 10px 50px auto;
+}
+
 
 #Parent {
   display: inline-flex;
@@ -69,8 +76,9 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 300;
-  color: #202A44;
   background-color: var(--primary);
+  font-family: "fredoka", Arial, Helvetica, sans-serif;
+  color: var(--font);
   
 }
 
@@ -83,14 +91,148 @@ body {
 
 }
 
+.mainContainer {
+  display:flex;
+  flex-direction: row-reverse;
+  flex-flow: row-reverse;
+  margin: 250px;
+}
+
+.mainContainer p {
+  font-size: 50px;
+  padding: 220px;
+  margin: 20px 0 10px 0;
+  background-color: var(--background);
+ 
+
+}
+.mainContainer img{
+  padding: 20px 10px 10px 10px;
+}
+
+#about {
+  color: var(--font);
+  text-align: center;
+  font-size: 100px;
+  background-color:var(--background) ;
+  margin: 0px 400px 0px 400px;
+
+}
+
+.aboutClass {
+  background-color: var(--background);
+  font-size: 80px;
+  margin: 200px 400px 0px 400px;
+}
+
+.ultimateContainer {
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+
+}
+
+#trainerIMG {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+  margin: 15px 50px 15px 50px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+.cardContainer {
+  padding: 2px 16px;
+  
+}
+
+.trainerNames {
+  font-size: 100px;
+  text-align: center;
+
+}
+
+.trainerBio {
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.douglasCard {
+  margin: 15px 50px 50px 50px;
+}
+
+.contactUs {
+  background-color: var(--background);
+  text-align: center;
+}
+
+.contactTag {
+  font-size: 60px;
+}
+
+.contactVariables {
+  font-size: 50px;
+  width: 400px;
+}
+
+.contactBox {
+  width: 200px;
+}
+
+#loginForm {
+  background-color: var(--background);
+  text-align: center;
+  margin: 210px 780px 0px 800px;
+  height: 500px;
+}
+
+#loginFormID {
+  font-size: 150px;
+}
+
+.loginFormContainer {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 480px;
+  height: 150px;
+
+}
+#loginFormContainerInputs {
+  font-size: 25px;
+  width: 450px;
+  padding: 5px;
+}
+
+#loginFormContainerButton {
+  font-size: 20px;
+  margin: 5px 0px;
+}
 
 #footer {
-  position: absolute;
+  position: fixed;
   /* add in a gradient for bottom of footer */
-  background: linear-gradient(to left, var(--teritary), #AAFF00);
+  background: rgb(220,116,233);
+  background: linear-gradient(90deg, rgba(220,116,233,0.9206057422969187) 0%, rgba(143,255,0,1) 20%, rgba(252,171,0,1) 100%);
   bottom: 0;
   width: 100%;
 
+}
+
+footer img {
+  height: 100px;
+  width: 85%;
+  margin-top: auto;
 }
 
 @media only screen and (max-width: 600px) {

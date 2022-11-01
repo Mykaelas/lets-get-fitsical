@@ -11,12 +11,14 @@ function Header(props) {
     return (
         <div >
             <header className="flexbox">
-                    <a href="/" classname="headerContainer">
+                    <a href="/" classname="headerContainer" >
                         <h1>
-                            Let's Get Fit- <br />Sical
-                            <img src={Bear} alt="bear"/>
+                            Let's Get Fit-  <br className="break" /> Sical
+                            
                         </h1>
+                        <img src={Bear} alt="bear"/>   
                     </a>
+
                 {// Header has Nav imported in to it// 
                 }
                 <Nav id="Nav"
