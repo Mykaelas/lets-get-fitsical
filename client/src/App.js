@@ -7,7 +7,7 @@ import Trainers from './components/Trainers';
 import Workouts from './components/Workouts';
 import Main from './components/Main';
 import Donation from './components/Donations'
-import Login from './components/Login';
+import Login from './components/login';
 function App() {
   const [tabSelected, setTabSelected] = useState('default');
 

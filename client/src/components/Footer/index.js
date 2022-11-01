@@ -3,8 +3,11 @@ import Image from '../../assets/images/FooterImage.jpg';
 
 function Footer() { 
     return (
-    <div id="footer">
-       <img src={Image} alt="footer" />
+        <div id="footer">
+            <footer>
+                <img src={Image} alt="footer"  />
+            </footer>
+
     </div>
     )
 }
