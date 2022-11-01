@@ -20,10 +20,10 @@ export const GET_ME = gql`
 export const GET_WORKOUT = gql`
   {
     workout {
-      workoutId
       name
       type
       muscle
+      equipment
       difficulty
     }
   }

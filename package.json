@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "lets-get-fitsical",
-=======
-  "name": "let-get-fitsical",
->>>>>>> 4afd14c3b67e6e06863277a6910f49626aaef515
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",

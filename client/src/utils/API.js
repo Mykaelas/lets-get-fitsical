@@ -50,25 +50,16 @@ export const deleteWorkout = (workoutId, token) => {
   });
 };
 
-export const searchWorkouts = (url, options) => {
-  return fetch(``).then((res) => res.json());
+export const searchWorkouts = (query) => {
+  return fetch(
+    `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=${query}`,
+    {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "2f1103bcf0msh9ba8e9d5b5d1dd9p10604ejsnc34304aaddc5",
+        "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
+        "Content-Type": "application/json",
+      },
+    }
+  );
 };
-// https://rapidapi.com/apininjas/api/exercises-by-api-ninjas
-
-// Class Example
-// export const searchGoogleBooks = (query) => {
-//   return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-// };
-
-// export const searchWorkouts = (query) => {
-//   const url = `https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=${query}`;
-
-//     const options = {
-//       method: "GET",
-//       headers: {
-//         "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
-//         "X-RapidAPI-Host": "exercises-by-api-ninjas.p.rapidapi.com",
-//       },
-//     };
-//     return fetch(url, options).then((res) => res.json());
-//   };
