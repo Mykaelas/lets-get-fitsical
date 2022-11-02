@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
 if(!error) {
     try {
         const {id} = paymentMethod
-        const response = await axios.post("/success?session_id={CHECKOUT_SESSION_ID}", {
+        const response = await axios.post("http:/localhost:4000/payment", {
             amount: 1000,
             id
         })
@@ -66,7 +66,7 @@ if(!error) {
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
-            <button>Donate</button>
+            <button>Donate $10</button>
         </form> 
         :
         <div>
