@@ -6,7 +6,7 @@ function SignUp() {
     return(
     <div id='signUpForm'>
             <h1  id="loginFormID">
-                Login
+               Sign Up
             </h1>
             <form action ="/user" method="post" id="signup">
                 <div class="loginFormContainer">

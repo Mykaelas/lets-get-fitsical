@@ -452,6 +452,10 @@ h1, h3 {
   #loginFormContainerButton {
     width: 55px;
   }
+
+  #signUpForm {
+    background-color: var(--background);
+  }
   #footer {
     position: fixed;
     height: 25px;
