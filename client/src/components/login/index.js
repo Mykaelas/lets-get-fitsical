@@ -16,7 +16,7 @@ function Login() {
                 <input type="email" id="loginFormContainerInputs"
                     placeholder="Enter Email" name="email" required>
                 </input>
-                <label> 
+                <label id="loginFormContainerEmail"> 
                     Password:
                 </label>
                 <input type="password" id="loginFormContainerInputs"

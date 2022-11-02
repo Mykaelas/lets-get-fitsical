@@ -408,6 +408,7 @@ h1, h3 {
     font-size: 20px;
   }
 
+
   .contactUs {
     margin: 15px 50px 40px 50px;
     background-color: var(--background);
@@ -454,8 +455,9 @@ h1, h3 {
   }
 
   #signUpForm {
-    background-color: var(--background);
+    background-color: var(--);
   }
+
   #footer {
     position: fixed;
     height: 25px;
@@ -922,7 +924,7 @@ header a {
   text-decoration: none;
   color: var(--quaternary);
    line-height: 1.5em;
-  font-size: 30px;
+  font-size: 50px;
   display: flex;
   flex-direction: row;
 
@@ -969,30 +971,31 @@ header.break {
 }
 
 .mainContainer img {
-  max-height: 500px;
-  max-width: 500px;
+  max-height: 1000px;
+  max-width: 1000px;
   margin: 250px 20px;
 }
 
 .mainContainer p {
-  font-size: 25px;
+  font-size: 45px;
   background-color: var(--background);
+  margin: 270px 500px 250px 100px;
 }
 
 
 #about {
   color: var(--font);
   text-align: center;
-  font-size: 50px;
+  font-size: 100px;
   background-color:var(--background) ;
-  margin: 20px 400px 0px 400px;
+  margin: 20px 600px 0px 600px;
 
 }
 
 .aboutClass {
   background-color: var(--background);
-  font-size: 30px;
-  margin: 100px 300px 100px 300px;
+  font-size: 50px;
+  margin: 100px 700px 100px 700px;
 }
 
 .ultimateContainer {
@@ -1042,28 +1045,29 @@ header.break {
 }
 
 .contactUs {
-  margin: 200px 20px 0px 200px;
+  margin: 200px 400px 0px 400px;
   background-color: var(--background);
   text-align: center;
 }
 
 .contactTag {
-  font-size: 100px;
+  font-size: 150px;
 }
 
 .contactVariables {
-  font-size: 50px;
+  font-size: 80px;
 }
 
 #contactBox {
   padding: 7px;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 #contactUsButton {
   font-size: 25px;
   font-family: "fredoka", Arial, Helvetica, sans-serif;
-
+  margin: 0px 700px 0px 700px;
+  width: 400px;
 }
 
 
@@ -1089,15 +1093,27 @@ header.break {
   font-size: 25px;
   width: 450px;
   padding: 5px;
+  margin: 0px 500px 0px 500px;
+} 
+
+#loginFormContainerEmail {
+  font-size: 50px;
+  margin:0px 500px 0px 500px;
 }
 
 #loginFormContainerButton {
   font-size: 20px;
-  margin: 5px 0px;
+  margin: 10px 680px;
   font-family: "fredoka", Arial, Helvetica, sans-serif;
 
 }
 
+#signInForm {
+  background-color: var(--background);
+  text-align: center;
+  margin: 150px 100px 0px 100px;
+  height: 570px;
+}
 
 #footer {
   position: fixed;

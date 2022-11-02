@@ -4,7 +4,7 @@ import React from 'react';
 function SignUp() {
     
     return(
-    <div id='signUpForm'>
+    <div id='signInForm'>
             <h1  id="loginFormID">
                Sign Up
             </h1>
@@ -22,7 +22,7 @@ function SignUp() {
                     <input type="email" id="loginFormContainerInputs"
                         placeholder="Enter Email" name="email" required>
                     </input>
-                    <label> 
+                    <label id="loginFormContainerEmail"> 
                         Password:
                     </label>
                     <input type="password" id="loginFormContainerInputs"
