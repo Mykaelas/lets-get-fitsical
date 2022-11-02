@@ -5,12 +5,40 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    workoutCount: Int
+    savedWorkouts: [Workout]
   }
+  type Workout {
+    muscle: String
+    difficulty: String
+  }
+  type Auth {
+    token: ID!
+    user: User
+  }
+  type Workout {
+    name: String
+    type: String
+    muscle: String
+    equipment: String
+    difficulty: String
+    instructions: String
+  }
+
   type Query {
     me: User
     users: [User]
+    workout(
+      name: String
+      type: String
+      muscle: String
+      equipment: String
+      difficulty: String
+      instructions: String
+    ): [Workout]
     user(username: String!): User
   }
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
@@ -19,12 +47,14 @@ const typeDefs = gql`
     token: ID!
     user: User
   }
+
 `;
 
-// type RemoveUserPayload {
-//   removed: Boolean
-//   user: username
-// }
-// removeUser(id: ID!): RemoveUserPayload
-// export the typeDefs
 module.exports = typeDefs;
+// type Workout {
+//   workoutId: String
+//   name: [String]
+//   type: [String]
+//   muscle: [String]
+//   difficulty: [String]
+// }
