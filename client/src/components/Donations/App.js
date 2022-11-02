@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import StripeContainer from './components/StripeContainer';
-import LetsGetFitSical from './assets/LetsGetFitSical.png'
+import StripeContainer from '../StripeContainer';
+import LetsGetFitSical from '../assets/LetsGetFitSical.png'
 import { useState } from 'react';
 
 function App() {
