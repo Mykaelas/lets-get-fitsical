@@ -199,7 +199,7 @@ body {
 #loginForm {
   background-color: var(--background);
   text-align: center;
-  margin: 210px 780px 0px 800px;
+  margin: 210px 400px 0px 800px;
   height: 500px;
 }
 
@@ -211,14 +211,12 @@ body {
   font-size: 50px;
   display: flex;
   flex-direction: column;
-  margin: 0px 480px;
   height: 150px;
+  width: 140px;
 
 }
 #loginFormContainerInputs {
   font-size: 25px;
-  width: 450px;
-  padding: 5px;
 }
 
 #loginFormContainerButton {
@@ -245,7 +243,7 @@ footer img {
   margin-top: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width:320px) and (max-width: 480px) {
   .flexbox {
     background-color: var(--secondary);
   }
@@ -289,16 +287,16 @@ footer img {
     display: flex;
     flex-direction: row-reverse;
     flex-flow: wrap;
-    margin: 20px 50px 50px 50px;
+    margin: 20px 50px 20px 50px;
   }
 
   .mainContainer p {
-    font-size: 25px;
-    padding: 100px;
+    font-size: 20px;
+    padding: 16px;
   }
   .mainContainer img {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 200px;
+    max-width: 400px;
   }
 
   #aboutDiv {
@@ -320,22 +318,25 @@ footer img {
     margin: 20px 50px 50px 60px;
   }
 
-  #trainerIMG {
-    align-items: center;
-    max-width: 200px;
-    max-height: 200px;
-  }
-
+  
   .card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 15px 20px 15px 20px;
+    margin: 15px 5px 25px 5px;
+  }
+  #trainerIMG {
+    margin: 0px 100px 0px;
+    max-width: 200px;
+    max-height: 200px;
   }
 
   .trainerNames {
     font-size: 45px;
     text-align: center;
+  }
+  .trainerBio {
+    font-size: 20px;
   }
 
   .contactUs {
@@ -367,15 +368,168 @@ footer img {
     font-size: 40px;
   }
   .loginFormContainer {
-    font-size: 25px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
-    margin: 0px 10px;
+    margin: 0px 100px;
+    align-items: center;
   }
 
   #loginFormContainerInputs {
     font-size: 15px;
-    width: 320px;
+    width: 140px;
+  }
+
+  #loginFormContainerButton {
+    width: 55px;
+  }
+  #footer {
+    position: fixed;
+    height: 25px;
+    width: 100%; 
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .flexbox {
+    background-color: var(--secondary);
+  }
+
+  header a {
+    font-size: 25px;
+    background-color: var(--secondary);
+  }
+
+  header img {
+    height: 250px;
+
+  }
+
+  header.flex-row {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+
+  #Parent {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%; 
+    height: 280px;
+  
+  }
+
+  .articles{
+    list-style: none;
+    padding: 0 15px 0px 0px;
+    font-size: 500px;
+    width: 100%;
+
+    
+  }
+
+  .mainContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px 20px 200px 20px;
+  }
+
+  .mainContainer p {
+    font-size: 25px;
+    padding: 60px;
+  }
+  .mainContainer img {
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  #aboutDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  #about {
+    text-align: center;
+    margin: 40px 25px 0px 100px; 
+    background-color: var(--background);
+    font-size: 65px;
+
+  }
+
+  .aboutClass {
+    font-size: 35px;
+    background-color: var(--background);
+    margin: 20px 50px 50px 60px;
+  }
+
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 20px 45px 20px;
+    align-items: center;
+
+  }
+  #trainerIMG {
+    margin: 0px 250px 0px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+
+  .trainerNames {
+    font-size: 45px;
+    text-align: center;
+  }
+  .trainerBio {
+    font-size: 30px;
+  }
+  .contactUs {
+    margin: 120px 50px 40px 50px;
+    background-color: var(--background);
+    text-align: center;
+  }
+
+  .contactTag {
+    font-size: 55px;
+  }
+  #contactBox{
+    font-size: 25px;
+  } 
+  .contactVariables {
+   font-size: 35px; 
+  }
+
+  #contactUsButton {
+    font-size: 30px;
+    font-family: "fredoka", Arial, Helvetica, sans-serif;
+  }
+
+  #loginForm {
+    background-color: var(--background);
+    text-align: center;
+    margin: 20px 15px 0px 20px;
+  }
+
+  #loginFormID {
+    font-size: 60px;
+  }
+  .loginFormContainer {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    align-items: center;
+  }
+
+  #loginFormContainerInputs {
+    font-size: 15px;
+    width: 150px;
+  }
+
+  #loginFormContainerButton {
+    font-size: 25px;
   }
   #footer {
     position: fixed;
@@ -384,37 +538,507 @@ footer img {
    }
 }
 
-@media only screen and (min-width: 600px) {
-  /* header a {
+
+@media only screen and (min-width:  769px) and (max-width:1024px ) {
+  .flexbox {
+    background-color: var(--secondary);
+  }
+
+  header a {
     font-size: 15px;
-    margin: 0 0 5px 0;
-  
+    background-color: var(--secondary);
+    width: 80%;
+    height: 100%;
+
   }
 
   header img {
-    height: 60px;
+    height: 150px;
+
   }
 
   header.flex-row {
     display: flex; 
     flex-wrap: wrap;
-    
+  }
+
+  #Parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .articles{
+    list-style: none;
+    padding: 0 5px 0px 0px;
+    font-size: 25px;
+  }
+
+  .mainContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px 20px 200px 20px;
+  }
+
+  .mainContainer p {
+    font-size: 25px;
+    padding: 60px;
+  }
+  .mainContainer img {
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  #aboutDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  #about {
+    text-align: center;
+    margin: 40px 25px 0px 100px; 
+    background-color: var(--background);
+    font-size: 65px;
+
+  }
+
+  .aboutClass {
+    font-size: 35px;
+    background-color: var(--background);
+    margin: 20px 50px 50px 60px;
+  }
+
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 20px 45px 20px;
+    align-items: center;
+
+  }
+  #trainerIMG {
+    margin: 0px 250px 0px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+
+  .trainerNames {
+    font-size: 45px;
+    text-align: center;
+  }
+  .trainerBio {
+    font-size: 30px;
+  }
+  .contactUs {
+    margin: 120px 50px 40px 50px;
+    background-color: var(--background);
+    text-align: center;
+  }
+
+  .contactTag {
+    font-size: 55px;
+  }
+  #contactBox{
+    font-size: 25px;
+  } 
+  .contactVariables {
+   font-size: 35px; 
+  }
+
+  #contactUsButton {
+    font-size: 30px;
+    font-family: "fredoka", Arial, Helvetica, sans-serif;
+  }
+
+  #loginForm {
+    background-color: var(--background);
+    text-align: center;
+    margin: 20px 15px 0px 20px;
+  }
+
+  #loginFormID {
+    font-size: 80px;
+  }
+  .loginFormContainer {
+    font-size: 45px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 290px;
+    align-items: center;
+  }
+
+  #loginFormContainerInputs {
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+  }
+
+  #loginFormContainerButton {
+    font-size: 25px;
   }
   #footer {
-    position: absolute;
-    width: 20%; */
-  /* } */
+    position: fixed;
+    height: 25px;
+    width: 100%; 
+   }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .flexbox {
+    background-color: var(--secondary);
+  }
+
+  header a {
+    font-size: 20px;
+    background-color: var(--secondary);
+    width: 80%;
+    height: 100%;
+
+  }
+
+  header img {
+    height: 150px;
+
+  }
+
+  header.flex-row {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+
+  #Parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .articles{
+    list-style: none;
+    padding: 0 5px 0px 0px;
+    font-size: 25px;
+  }
+
+  .mainContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 280px 20px 200px 20px;
+  }
+
+  .mainContainer p {
+    font-size: 36px;
+    padding: 60px;
+  }
+  .mainContainer img {
+    max-height: 450px;
+    max-width: 450px;
+  }
+
+  #aboutDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  #about {
+    text-align: center;
+    margin: 210px 25px 0px 100px; 
+    background-color: var(--background);
+    font-size: 65px;
+
+  }
+
+  .aboutClass {
+    font-size: 35px;
+    background-color: var(--background);
+    margin: 20px 50px 50px 60px;
+  }
+
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 20px 45px 20px;
+    align-items: center;
+
+  }
+  #trainerIMG {
+    margin: 0px 390px 0px;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+
+  .trainerNames {
+    font-size: 45px;
+    text-align: center;
+  }
+  .trainerBio {
+    font-size: 30px;
+  }
+  .contactUs {
+    margin: 120px 50px 40px 50px;
+    background-color: var(--background);
+    text-align: center;
+  }
+
+  .contactTag {
+    font-size: 55px;
+  }
+  #contactBox{
+    font-size: 25px;
+  } 
+  .contactVariables {
+   font-size: 35px; 
+  }
+
+  #contactUsButton {
+    font-size: 30px;
+    font-family: "fredoka", Arial, Helvetica, sans-serif;
+  }
+
+  #loginForm {
+    background-color: var(--background);
+    text-align: center;
+    margin: 200px 10px 0px 20px;
+  }
+
+  #loginFormID {
+    font-size: 90px;
+  }
+  .loginFormContainer {
+    font-size: 65px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 420px;
+    align-items: center;
+  }
+
+  #loginFormContainerInputs {
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+  }
+
+  #loginFormContainerButton {
+    font-size: 25px;
+  }
+  #footer {
+    position: fixed;
+    height: 25px;
+    width: 100%; 
+   }
+}
+
+@media only screen and (min-width: 1201px) {
+  
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+
+header {
+  background-color: var(--secondary);
+  font-family:  'fredoka', Arial, Helvetica, sans-serif ;
+}
+
+
+header a {
+  text-decoration: none;
+  color: var(--quaternary);
+   line-height: 1.5em;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+header a:hover {
+  color: rebeccapurple;
+}
+
+/* Potentially change the bears location */
+header img {
+ height : 210px;
+ padding: 10px 40px;
+}
+
+header.flex-row {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+header.break {
+  margin: 10px 50px auto;
+}
+
+
+#Parent {
+  display: inline-flex;
+  justify-content: flex-end;
+
+}
+
+.articles{
+  list-style: none;
+  padding: 0 25px 0px 0px;
+  font-size: 1.875em;
   
 }
 
-@media only screen and (min-width: 992px) {
+.mainContainer {
+  display:flex;
+  flex-direction: row-reverse;
+  flex-flow: row-reverse;
+  margin: 20px 20px;
+}
+
+.mainContainer img {
+  max-height: 500px;
+  max-width: 500px;
+  margin: 250px 20px;
+}
+
+.mainContainer p {
+  font-size: 25px;
+  background-color: var(--background);
+}
+
+
+#about {
+  color: var(--font);
+  text-align: center;
+  font-size: 50px;
+  background-color:var(--background) ;
+  margin: 20px 400px 0px 400px;
 
 }
 
-@media only screen and (min-width: 1200px) {
+.aboutClass {
+  background-color: var(--background);
+  font-size: 30px;
+  margin: 100px 300px 100px 300px;
+}
+
+.ultimateContainer {
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+
+}
+
+#trainerIMG {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+  margin: 15px 50px 15px 50px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+.cardContainer {
+  padding: 2px 16px;
   
 }
 
+.trainerNames {
+  font-size: 100px;
+  text-align: center;
+
+}
+
+.trainerBio {
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.douglasCard {
+  margin: 15px 50px 50px 50px;
+}
+
+.contactUs {
+  margin: 200px 20px 0px 200px;
+  background-color: var(--background);
+  text-align: center;
+}
+
+.contactTag {
+  font-size: 100px;
+}
+
+.contactVariables {
+  font-size: 50px;
+}
+
+#contactBox {
+  padding: 7px;
+  font-size: 15px;
+}
+
+#contactUsButton {
+  font-size: 25px;
+  font-family: "fredoka", Arial, Helvetica, sans-serif;
+
+}
+
+
+#loginForm {
+  background-color: var(--background);
+  text-align: center;
+  margin: 210px 100px 0px 100px;
+}
+
+#loginFormID {
+  font-size: 150px;
+}
+
+.loginFormContainer {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 480px;
+  height: 150px;
+
+}
+#loginFormContainerInputs {
+  font-size: 25px;
+  width: 450px;
+  padding: 5px;
+}
+
+#loginFormContainerButton {
+  font-size: 20px;
+  margin: 5px 0px;
+  font-family: "fredoka", Arial, Helvetica, sans-serif;
+
+}
+
+
+#footer {
+  position: fixed;
+  /* add in a gradient for bottom of footer */
+  background: rgb(220,116,233);
+  background: linear-gradient(90deg, rgba(220,116,233,0.9206057422969187) 0%, rgba(143,255,0,1) 20%, rgba(252,171,0,1) 100%);
+  bottom: 0;
+  width: 100%;
+
+}
+
+footer img {
+  height: 50px;
+  width: 85%;
+  margin-top: auto;
+}
+} 
