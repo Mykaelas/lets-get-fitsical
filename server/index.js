@@ -4,11 +4,13 @@ require("dotenv").config()
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST)
 const bodyParser = require("body-parser")
 const cors = require("cors")
+const userRoutes = require("./routes/api/user-routes");
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.use(cors())
+app.use("/user", userRoutes )
 
 app.post("/payment", cors(), async (req, res) => {
     let {amount, id } = req.body
@@ -34,6 +36,7 @@ app.post("/payment", cors(), async (req, res) => {
     }
 });
 
+app.post("/login")
 
 
 app.listen(process.env.PORT || 4000, () => {
