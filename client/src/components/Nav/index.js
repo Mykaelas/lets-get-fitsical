@@ -39,6 +39,11 @@ function Nav(props) {
               Login
             </a>
           </li>
+          <li className="mx-2 articles" >
+            <a data-testid="signup" href="#signup" onClick={() => setTabSelected('signup')}>
+              Sign Up
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

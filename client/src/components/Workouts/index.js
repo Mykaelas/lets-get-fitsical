@@ -20,11 +20,10 @@ const Workouts = () => {
     }
   };
   return (
-    <div>
-      <p>
-        Hey you, you're awake // make a drop down list of type of type, muscle
-        group, and difficulty. Workouts will be displayed on cards with each
-        part listed name, type, muscle group, equipment, difficutly,
+    <div className="workoutP">
+      <p >
+        Click on the tab and choose a muscle group to work out as well 
+        as the difficulty and what equipment you are using. 
       </p>
       <form>
         <div className="workoutMuscles data hidden">
@@ -52,7 +51,7 @@ const Workouts = () => {
           </select>
         </div>
         <div>
-          <button className="form-btn" onClick={() => showWorkouts(value)}>
+          <button className="form-btn formSubmitButton" onClick={() => showWorkouts(value)}>
             Search
           </button>
         </div>

@@ -292,11 +292,26 @@ button:active {
   margin-top: 5%;
   margin-right: 25%;
   text-align: center;
+  background-color: var(--background);
 }
 h1, h3 {
   text-align: center;
 }
+.workoutP {
+  margin: 100px 500px 0px 500px;
+  background-color: var(--background);
+  font-size: 45px;
+  text-align: center;
+}
 
+.formQuery {
+  font-size: 25px;
+}
+
+.formSubmitButton {
+  width: 85px;
+  margin: 0px 700px;
+}
 @media only screen and (min-width:320px) and (max-width: 480px) {
   .flexbox {
     background-color: var(--secondary);

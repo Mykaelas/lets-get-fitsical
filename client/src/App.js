@@ -8,7 +8,7 @@ import Workouts from './components/Workouts';
 import Main from './components/Main';
 import Donation from './components/Donations'
 import Login from './components/login';
-// import App from './components/Donations/App'
+import SignUp from './components/Sign Up';
 function App() {
   const [tabSelected, setTabSelected] = useState('default');
 
@@ -25,6 +25,7 @@ function App() {
                 workouts: <Workouts />,
                 donation: <Donation />,
                 login: <Login />,
+                signup: <SignUp />,
                 default: <Main />
 
               }[tabSelected]
