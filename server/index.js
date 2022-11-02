@@ -40,5 +40,5 @@ app.post("/login")
 
 
 app.listen(process.env.PORT || 4000, () => {
-    console.log("Server is listening on Port 3000")
+    console.log("Server is listening on Port 4000")
 })
